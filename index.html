@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dede Agung Gunawan</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to bottom, #020617, #0f172a, #000000);
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .stars{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      z-index:-1;
+    }
+
+    .star{
+      position:absolute;
+      background:white;
+      border-radius:50%;
+      animation:blink 2s infinite;
+    }
+
+    @keyframes blink{
+      0%{opacity:0.2;}
+      50%{opacity:1;}
+      100%{opacity:0.2;}
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+      padding:40px 0;
+    }
+
+    .hero{
+      text-align:center;
+      padding:120px 20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+      color:#7dd3fc;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.7;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter:blur(10px);
+      border-radius:25px;
+      padding:30px;
+      margin-top:30px;
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#7dd3fc;
+      font-size:35px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    ul{
+      margin-left:20px;
+      line-height:2;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      margin-top:40px;
+      background:rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<section class="hero">
+  <h1>Dede Agung Gunawan</h1>
+  <p>
+    Fresh Graduate SMA dengan pengalaman bekerja di toko printing Daizzy 
+    yang berlokasi di Sarengseng, Jawa Barat.
+  </p>
+</section>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya adalah pribadi yang disiplin, cepat belajar, dan mampu bekerja sama dalam tim.
+      Berpengalaman bekerja di toko printing Daizzy selama kurang lebih 2 tahun.
+      Terbiasa menangani proses printing, finishing, dan menjaga kualitas hasil cetak.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Pengalaman</h2>
+      <p><b>Daizzy Printing</b></p>
+      <p>Sarengseng, Jawa Barat • 2023 - 2025</p>
+
+      <ul>
+        <li>Mengoperasikan alat printing dan sablon</li>
+        <li>Menjaga kualitas hasil cetakan</li>
+        <li>Bekerja sesuai target produksi</li>
+        <li>Membantu proses finishing dan packing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Skill</h2>
+
+      <ul>
+        <li>Komunikasi yang baik</li>
+        <li>Kerja sama tim</li>
+        <li>Disiplin dan tanggung jawab</li>
+        <li>Digital marketing dasar</li>
+        <li>Editing dan desain sederhana</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Kontak</h2>
+
+    <p>📍 Subang, Jawa Barat</p>
+    <p>📞 083171756533</p>
+    <p>✉️ dede557263@gmail.com</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Dede Agung Gunawan. All Rights Reserved.
+</footer>
+
+<script>
+  const stars = document.getElementById("stars");
+
+  for(let i = 0; i < 120; i++){
+    let star = document.createElement("div");
+    star.classList.add("star");
+
+    let size = Math.random() * 3;
+
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    stars.appendChild(star);
+  }
+</script>
+
+</body>
+</html>
